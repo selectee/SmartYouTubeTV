@@ -40,7 +40,7 @@ android {
         applicationId "com.liskovsoft.videomanager"
         versionCode 1166
         versionName "6.17.586"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         buildConfigField "long", "TIMESTAMP", System.currentTimeMillis() + "L"
 
         multiDexEnabled = true
@@ -208,7 +208,7 @@ android {
 }
 
 dependencies {
-    androidTestImplementation('com.android.support.test.espresso:espresso-core:' + espressoCoreVersion, {
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     testImplementation 'junit:junit:' + junitVersion
